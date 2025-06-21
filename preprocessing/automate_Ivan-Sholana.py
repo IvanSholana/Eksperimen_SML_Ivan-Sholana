@@ -101,10 +101,8 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     # Combine encoded categorical features, PCA components, and target variable
     df_final = pd.concat([
         df_encoded['Behavioral_Index'],
-        df_encoded[categorical_features],  # Encoded categorical features                           # PCA components       # Target variable
+        df_encoded[categorical_features], 
     ], axis=1)
-    
-    df_filled.head()
     
     print(f"[INFO] Data preprocessing complete.")
     return df_final
